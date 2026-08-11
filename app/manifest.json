@@ -1,0 +1,52 @@
+{
+    "name": "Dirty Hands Toolbox",
+    "short_name": "DHT Toolbox",
+    "start_url": ".",
+    "display": "standalone",
+    "background_color": "#121212",
+    "theme_color": "#FF6700",
+    "description": "Offline-first garage and build tracker for vehicles, parts, torque specs, and maintenance.",
+    "orientation": "portrait-primary",
+    "prefer_related_applications": false,
+    "categories": ["utilities", "automotive", "lifestyle"],
+    "icons": [
+        {
+            "src": "icons/Icon-192.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "icons/Icon-512.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        },
+        {
+            "src": "icons/Icon-maskable-192.png",
+            "sizes": "192x192",
+            "type": "image/png",
+            "purpose": "maskable"
+        },
+        {
+            "src": "icons/Icon-maskable-512.png",
+            "sizes": "512x512",
+            "type": "image/png",
+            "purpose": "maskable"
+        }
+    ],
+    "shortcuts": [
+        {
+            "name": "Shop Dashboard",
+            "short_name": "Dashboard",
+            "description": "View global maintenance alerts",
+            "url": "/#/maintenance-dashboard",
+            "icons": [{ "src": "icons/Icon-192.png", "sizes": "192x192" }]
+        },
+        {
+            "name": "Add Vehicle",
+            "short_name": "Add",
+            "description": "Initialize a new vehicle",
+            "url": "/#/add-vehicle",
+            "icons": [{ "src": "icons/Icon-192.png", "sizes": "192x192" }]
+        }
+    ]
+}
