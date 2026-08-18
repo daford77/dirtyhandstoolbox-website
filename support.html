@@ -1,0 +1,251 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="color-scheme" content="dark" />
+  <meta name="description" content="Support, FAQ, and contact information for Dirty Hands Toolbox.">
+  <link rel="icon" type="image/png" href="favicon.png">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <title>Support | Dirty Hands Toolbox</title>
+  <style>
+    :root {
+      --bg: #0a0a0a;
+      --bg-card: #181818;
+      --text: #f4f4f4;
+      --muted: #b7bcc3;
+      --orange: #ff6a00;
+      --volt: #d6ff00;
+      --border: #2a2a2a;
+      --maxw: 860px;
+      --radius: 16px;
+      --shadow: 0 10px 30px rgba(0,0,0,.35);
+    }
+
+    * { box-sizing: border-box; }
+    html, body { margin: 0; padding: 0; }
+    body {
+      font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background:
+        radial-gradient(1200px 500px at 10% -20%, rgba(255,106,0,.12), transparent 60%),
+        radial-gradient(900px 400px at 100% 0%, rgba(214,255,0,.08), transparent 55%),
+        var(--bg);
+      color: var(--text);
+      line-height: 1.65;
+      min-height: 100vh;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .wrap {
+      width: min(100% - 2rem, var(--maxw));
+      margin: 0 auto;
+      padding: 48px 0 72px;
+    }
+
+    a { color: var(--volt); text-decoration: none; }
+    a:hover { color: var(--orange); }
+
+    .back {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 0.9rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin-bottom: 36px;
+    }
+
+    h1 {
+      margin: 0 0 8px;
+      font-size: clamp(2rem, 5vw, 3rem);
+      text-transform: uppercase;
+      color: var(--orange);
+      letter-spacing: 0.04em;
+    }
+
+    .subtitle {
+      margin: 0 0 48px;
+      color: var(--muted);
+      font-size: 1.05rem;
+    }
+
+    .section-title {
+      font-size: 0.78rem;
+      font-weight: 900;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--volt);
+      margin: 0 0 16px;
+    }
+
+    .card {
+      background: var(--bg-card);
+      border: 1px solid rgba(255,255,255,0.07);
+      border-radius: var(--radius);
+      padding: 24px 28px;
+      margin-bottom: 12px;
+      box-shadow: var(--shadow);
+    }
+
+    .faq-q {
+      font-size: 1rem;
+      font-weight: 800;
+      color: #fff;
+      margin: 0 0 10px;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+    }
+
+    .faq-a {
+      margin: 0;
+      color: var(--muted);
+      font-size: 0.97rem;
+      line-height: 1.7;
+    }
+
+    .faq-a code {
+      background: rgba(255,255,255,0.08);
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-size: 0.9em;
+    }
+
+    .contact-card {
+      background: linear-gradient(135deg, rgba(255,106,0,0.12), rgba(214,255,0,0.06));
+      border: 1px solid rgba(255,106,0,0.3);
+      border-radius: var(--radius);
+      padding: 28px;
+      margin-top: 40px;
+    }
+
+    .contact-card h2 {
+      margin: 0 0 8px;
+      font-size: 1.1rem;
+      text-transform: uppercase;
+      color: var(--orange);
+    }
+
+    .contact-card p {
+      margin: 0 0 16px;
+      color: var(--muted);
+    }
+
+    .contact-card a {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-weight: 700;
+      font-size: 1rem;
+    }
+
+    footer {
+      margin-top: 64px;
+      padding-top: 20px;
+      border-top: 1px solid rgba(255,255,255,0.06);
+      color: rgba(255,255,255,0.38);
+      font-size: 0.88rem;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      justify-content: space-between;
+    }
+
+    footer a { color: var(--volt); font-weight: 700; }
+    footer a:hover { color: var(--orange); }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <a class="back" href="/">&larr; Back to Home</a>
+
+    <h1>Support</h1>
+    <p class="subtitle">Answers to common questions and how to get in touch.</p>
+
+    <p class="section-title">Frequently Asked Questions</p>
+
+    <div class="card">
+      <p class="faq-q">My data disappeared after closing the web app</p>
+      <p class="faq-a">
+        The web app stores data locally in your browser's IndexedDB. Clearing browser data or using private/incognito mode will wipe it.
+        To protect your data, enable <strong>Cloud Backup</strong> in Settings (requires Pro). This syncs a backup to your Google Drive so you can restore across sessions and devices.
+      </p>
+    </div>
+
+    <div class="card">
+      <p class="faq-q">The Google sign-in keeps asking me to approve permissions</p>
+      <p class="faq-a">
+        On the web app, Google authorization tokens can expire. Go to <strong>Settings &rarr; Cloud Backup</strong> and tap
+        <em>Clear Auth Cache / Reauth</em> to reset the session, then sign in again. After a successful backup the prompt should not reappear until the token expires.
+      </p>
+    </div>
+
+    <div class="card">
+      <p class="faq-q">How do I restore a cloud backup?</p>
+      <p class="faq-a">
+        Open the app, go to <strong>Settings &rarr; Cloud Backup</strong>, sign in with the same Google account you used to back up,
+        then tap <em>Restore from Cloud</em>. This will overwrite your current local data with the backup from Google Drive.
+      </p>
+    </div>
+
+    <div class="card">
+      <p class="faq-q">Can I use the app on iPhone or iPad?</p>
+      <p class="faq-a">
+        Yes — open <a href="app/">dirtyhandstoolbox.com/app/</a> in Safari on your iPhone or iPad. For the best experience,
+        tap <strong>Share &rarr; Add to Home Screen</strong>. This pins the app to your home screen so it launches full-screen like a native app.
+      </p>
+    </div>
+
+    <div class="card">
+      <p class="faq-q">What is Pro and what does it include?</p>
+      <p class="faq-a">
+        The free version supports one vehicle with full assembly and parts tracking. <strong>Pro</strong> unlocks unlimited vehicles,
+        cloud backup to Google Drive, PDF export, full maintenance history, and more. You can upgrade inside the Android app
+        or via the in-app purchase on the web app.
+      </p>
+    </div>
+
+    <div class="card">
+      <p class="faq-q">How do I transfer my data from Android to the web app (or vice versa)?</p>
+      <p class="faq-a">
+        Enable <strong>Cloud Backup</strong> on your Android device (Settings &rarr; Cloud Sync &rarr; Backup Now).
+        Then open the web app, sign in with the same Google account, and tap <em>Restore from Cloud</em>.
+        Your vehicles, assemblies, specs, and maintenance history will transfer over.
+      </p>
+    </div>
+
+    <div class="card">
+      <p class="faq-q">How do I export or share my vehicle data?</p>
+      <p class="faq-a">
+        On Android, tap the share icon on any vehicle card to share a JSON package of that vehicle's full data.
+        You can also export a full database backup from <strong>Settings &rarr; Backup &amp; Restore &rarr; Export JSON</strong>
+        and import it into another device.
+      </p>
+    </div>
+
+    <div class="card">
+      <p class="faq-q">The barcode / QR scanner isn't working</p>
+      <p class="faq-a">
+        The scanner requires camera permission. On Android, grant camera access when prompted or enable it in your device Settings &rarr; App Permissions.
+        The scanner is not available in the web app — use the Android app for barcode and QR scanning.
+      </p>
+    </div>
+
+    <div class="contact-card">
+      <h2>Still need help?</h2>
+      <p>Send an email and we'll get back to you as soon as possible.</p>
+      <a href="mailto:support@dirtyhandstoolbox.com">&#9993; support@dirtyhandstoolbox.com</a>
+    </div>
+
+    <footer>
+      <span>&copy; 2026 Dirty Hands Toolbox</span>
+      <div>
+        <a href="/" style="margin-right:14px">Home</a>
+        <a href="privacy.html" style="margin-right:14px">Privacy Policy</a>
+        <a href="app/">Web App</a>
+      </div>
+    </footer>
+  </div>
+</body>
+</html>
+
