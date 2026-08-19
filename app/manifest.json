@@ -8,30 +8,10 @@
     "description": "Offline-first garage and build tracker for vehicles, parts, torque specs, and maintenance.",
     "orientation": "portrait-primary",
     "prefer_related_applications": false,
-    "categories": ["utilities", "automotive", "lifestyle"],
-    "icons": [
-        {
-            "src": "icons/Icon-192.png",
-            "sizes": "192x192",
-            "type": "image/png"
-        },
-        {
-            "src": "icons/Icon-512.png",
-            "sizes": "512x512",
-            "type": "image/png"
-        },
-        {
-            "src": "icons/Icon-maskable-192.png",
-            "sizes": "192x192",
-            "type": "image/png",
-            "purpose": "maskable"
-        },
-        {
-            "src": "icons/Icon-maskable-512.png",
-            "sizes": "512x512",
-            "type": "image/png",
-            "purpose": "maskable"
-        }
+    "categories": [
+        "utilities",
+        "automotive",
+        "lifestyle"
     ],
     "shortcuts": [
         {
@@ -39,14 +19,48 @@
             "short_name": "Dashboard",
             "description": "View global maintenance alerts",
             "url": "/#/maintenance-dashboard",
-            "icons": [{ "src": "icons/Icon-192.png", "sizes": "192x192" }]
+            "icons": [
+                {
+                    "src": "icons/Icon-192.png?v=1.0.2-6",
+                    "sizes": "192x192"
+                }
+            ]
         },
         {
             "name": "Add Vehicle",
             "short_name": "Add",
             "description": "Initialize a new vehicle",
             "url": "/#/add-vehicle",
-            "icons": [{ "src": "icons/Icon-192.png", "sizes": "192x192" }]
+            "icons": [
+                {
+                    "src": "icons/Icon-192.png?v=1.0.2-6",
+                    "sizes": "192x192"
+                }
+            ]
+        }
+    ],
+    "icons": [
+        {
+            "src": "icons/Icon-192.png?v=1.0.2-6",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "icons/Icon-512.png?v=1.0.2-6",
+            "sizes": "512x512",
+            "type": "image/png"
+        },
+        {
+            "src": "icons/Icon-maskable-192.png?v=1.0.2-6",
+            "sizes": "192x192",
+            "type": "image/png",
+            "purpose": "maskable"
+        },
+        {
+            "src": "icons/Icon-maskable-512.png?v=1.0.2-6",
+            "sizes": "512x512",
+            "type": "image/png",
+            "purpose": "maskable"
         }
     ]
 }
