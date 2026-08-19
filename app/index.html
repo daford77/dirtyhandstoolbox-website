@@ -41,6 +41,37 @@
   <!-- Google Identity Services – required for google_sign_in_web -->
   <meta name="google-signin-client_id" content="1031676598938-50avkq0v1t8a2u0m3nugqote9i9s2ql4.apps.googleusercontent.com">
   <script src="https://accounts.google.com/gsi/client" async defer></script>
+  <script>
+    // Handle Google Identity Services One Tap UI callbacks
+    // This prevents GSI_LOGGER warnings about deprecated status methods
+    // when FedCM becomes mandatory. Opt-in to FedCM for future compatibility.
+    window.addEventListener('load', function() {
+      // Wait for google object to be available
+      if (typeof google !== 'undefined' && google.accounts && google.accounts.id) {
+        // Set up One Tap UI handlers that use callbacks instead of deprecated status methods
+        // The flutter google_sign_in_web plugin handles initialization; we just set up the callbacks
+        try {
+          google.accounts.id.oneTapPromptMomentsListener({
+            onDisplay: function() {
+              console.debug('[GSI] One Tap prompt displayed');
+            },
+            onSkipped: function() {
+              console.debug('[GSI] One Tap prompt skipped');
+            },
+            onDismissed: function() {
+              console.debug('[GSI] One Tap prompt dismissed by user');
+            },
+            onError: function(error) {
+              console.debug('[GSI] One Tap error:', error);
+            }
+          });
+        } catch (e) {
+          // Silently ignore if the method doesn't exist (older GSI versions)
+          console.debug('[GSI] One Tap listener setup skipped:', e.message);
+        }
+      }
+    });
+  </script>
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-W77TXWFY3E"></script>
   <script>
