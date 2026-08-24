@@ -2396,10 +2396,7 @@ google_sign_in_web
 image_picker_for_web
 image_picker_macos
 image_picker_platform_interface
-in_app_purchase
-in_app_purchase_android
 in_app_purchase_platform_interface
-in_app_purchase_storekit
 path_provider
 path_provider_android
 path_provider_foundation
@@ -6174,6 +6171,9 @@ google_sign_in
 google_sign_in_platform_interface
 image_picker_linux
 image_picker_windows
+in_app_purchase
+in_app_purchase_android
+in_app_purchase_storekit
 path_provider_windows
 plugin_platform_interface
 shared_preferences_linux
